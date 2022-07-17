@@ -28,23 +28,23 @@ public class FilmManagerTest {
         Film[] actual = manager.findAll();
         Film[] expected = {first, second, third, fourth};
 
-        Assertions.assertArrayEquals(expected,actual);
+        Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
-    public void findLastTest(){
+    public void findLastTest() {
         manager.add(fifth);
         manager.add(sixth);
         manager.add(seventh);
 
         Film[] actual = manager.findLast();
-        Film[] expected = {seventh,sixth, fifth};
+        Film[] expected = {seventh, sixth, fifth};
 
-        Assertions.assertArrayEquals(expected,actual);
+        Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
-    public void findLastLimitTest(){
+    public void findLastLimitTest() {
         manager.add(first);
         manager.add(second);
         manager.add(third);
@@ -59,8 +59,8 @@ public class FilmManagerTest {
         manager.add(twelve);
 
         Film[] actual = manager.findLast();
-        Film[] expected = {twelve,eleventh,tenth,ninth,eighth,seventh,sixth,fifth,fourth,third};
+        Film[] expected = {twelve, eleventh, tenth, ninth, eighth, seventh, sixth, fifth, fourth, third};
 
-        Assertions.assertArrayEquals(expected,actual);
+        Assertions.assertArrayEquals(expected, actual);
     }
 }
